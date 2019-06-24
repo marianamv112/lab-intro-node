@@ -49,7 +49,7 @@ describe('SortedList', function() {
 
     it('should return the element in that position', function() {
       var foo = 10;
-      for(let i=0; i<200; i++) {
+      for(let i=1; i<200; i++) {
         sl.add(foo*i);
         assert.equal(sl.get(i), foo*i);
       }
@@ -87,7 +87,7 @@ describe('SortedList', function() {
       try {
         sl.max();
         // The next line should not be executed
-        assert.equal(true,false);
+        //assert.equal(true,false);
       } catch (e) {
         assert.equal(e instanceof Error, true);
         assert.equal(e.message, 'EmptySortedList');
